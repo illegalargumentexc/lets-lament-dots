@@ -1,0 +1,182 @@
+@define-color cc-bg rgba(23, 25, 28, 0.8);
+
+@define-color mpris-bg rgb(30, 32, 48);
+
+@define-color noti-border-color rgba(255, 255, 255, 0);
+@define-color noti-bg #333333;
+@define-color noti-bg-hover #555555;
+@define-color noti-bg-focus #222222;
+@define-color noti-close-bg #333333;
+@define-color noti-close-bg-hover #000000;
+@define-color text #cccccc;
+
+@define-color bg-selected #cccccc;
+@define-color scale-trough rgb(244, 219, 214);
+
+* {
+  color: @text;
+  font-family: JetBrainsMonoNL Nerd Font;
+}
+
+.notification-row {
+  background: none;
+  box-shadow: none;
+}
+
+.notification {
+  border-radius: 10px;
+  margin: 12px 12px;
+  box-shadow: none;
+  padding: 0;
+}
+
+scale {
+  padding-left: 21px;
+  padding-right: 18px;
+  color: #444444;
+}
+
+scale trough {
+  background-color: @scale-trough;
+  color: black;
+}
+
+scale trough highlight {
+  background-color: @bg-selected;
+  background-image: none;
+}
+
+scale trough slider {
+  background-color: @bg-selected;
+  border: 2px solid @bg-selected;
+  box-shadow: none;
+}
+
+.notification-content {
+  background: none;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.close-button {
+  background: @noti-close-bg;
+  color: @text;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 100%;
+  margin-top: 16px;
+  margin-right: 16px;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: @noti-close-bg-hover;
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+.notification-default-action,
+.notification-action {
+  padding: 12px;
+  margin: 0;
+  box-shadow: none;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  color: @text;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  -gtk-icon-effect: none;
+  background: @noti-bg-hover;
+}
+
+.notification-default-action:active,
+.notification-action:active {
+  background: @noti-bg;
+}
+
+.notification-default-action {
+  border-radius: 10px;
+}
+
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.notification-action {
+  border-radius: 0px;
+  border-top: none;
+  border-right: none;
+}
+
+.notification-action:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.notification-action:last-child {
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid @noti-border-color;
+}
+
+.body-image {
+  margin-top: 6px;
+  background-color: @text;
+  border-radius: 10px;
+  margin-right: 20px;
+  padding-right: 30px;
+}
+.image {
+	padding-right: 10px;
+}
+.summary {
+  font-size: 16px;
+  font-weight: bold;
+  background: none;
+  color: @text;
+  text-shadow: none;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: bold;
+  background: none;
+  color: @text;
+  text-shadow: none;
+  margin-right: 4px;
+}
+
+.body {
+  font-size: 15px;
+  font-weight: normal;
+  color: @text;
+  text-shadow: none;
+}
+
+.control-center {
+  background: @cc-bg;
+  border-radius: 10px;
+  border: 2px solid rgb(125, 196, 228);
+}
+
+.control-center-list {
+  background: none;
+}
+
+.control-center-list-placeholder {
+  opacity: 0;
+}
+
+.floating-notifications {
+  background: none;
+}
+
+/* Window behind control center and on all other monitors */
+.blank-window {
+  background: alpha(black, 0);
+}
